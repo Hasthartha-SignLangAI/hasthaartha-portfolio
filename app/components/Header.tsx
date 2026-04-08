@@ -7,15 +7,15 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-950/90">
+    <header className="sticky top-0 z-50 border-b border-blue-100 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <a
           href="#home"
-          className="flex shrink-0 items-center gap-2 text-slate-900 dark:text-slate-50"
+          className="flex shrink-0 items-center gap-2 text-slate-900"
           onClick={() => setOpen(false)}
         >
           <span
-            className="flex h-9 w-9 items-center justify-center rounded-lg bg-teal-600 text-sm font-bold text-white shadow-sm"
+            className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white shadow-sm"
             aria-hidden
           >
             H
@@ -23,15 +23,12 @@ export function Header() {
           <span className="font-semibold tracking-tight">{SITE_NAME}</span>
         </a>
 
-        <nav
-          className="hidden items-center gap-1 md:flex"
-          aria-label="Primary"
-        >
+        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-slate-100"
+              className="rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-blue-50 hover:text-blue-700"
             >
               {link.label}
             </a>
@@ -40,7 +37,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-slate-700 md:hidden dark:text-slate-200"
+          className="inline-flex items-center justify-center rounded-md p-2 text-slate-700 md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -59,16 +56,13 @@ export function Header() {
       </div>
 
       {open ? (
-        <div
-          id="mobile-nav"
-          className="border-t border-slate-200 bg-white px-4 py-4 md:hidden dark:border-slate-800 dark:bg-slate-950"
-        >
+        <div id="mobile-nav" className="border-t border-blue-100 bg-white px-4 py-4 md:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-md px-3 py-2.5 text-base font-medium text-slate-800 hover:bg-slate-100 dark:text-slate-100 dark:hover:bg-slate-900"
+                className="rounded-md px-3 py-2.5 text-base font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-700"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
