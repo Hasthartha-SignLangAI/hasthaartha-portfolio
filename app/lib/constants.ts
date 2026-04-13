@@ -66,6 +66,72 @@ export const MILESTONES = [
   },
 ] as const;
 
+export const TEAM_MEMBERS = [
+  {
+    name: "Rakindu Marambe",
+    role: "Wearable arm-band designer",
+    description:
+      "Rakindu has over 1 year of industry experience and is interested in the fields of enterprise application development and Internet of Things(IoT)",
+    image: "/team/rakindu.jpeg",
+    github: "https://github.com/RakinduM",
+    linkedin: "https://www.linkedin.com/in/rakindu-marambe-694077276/",
+  },
+  {
+    name: "James Sembukuttiarachchi",
+    role: "Hybrid model trainer",
+    description:
+      "James has over 1 year of industry experience and interested in software development, automation workflows and and LLM technologies",
+    image: "/team/avatar-placeholder.svg",
+    github: "https://github.com/JamesSembukuttiarachchi",
+    linkedin: "https://www.linkedin.com/in/jamessembukuttiarachchi/",
+  },
+  {
+    name: "Amaya Fernando",
+    role: "Edge mobile application developer and integrator",
+    description:
+      "Amaya has over 1 year of industry experience and is interested in the fields of Quality Engineering and AI technologies",
+    image: "/team/Amaya.jpg",
+    github: "https://github.com/amaya2509",
+    linkedin: "https://www.linkedin.com/in/amayafernando25/",
+  },
+  {
+    name: "Hiruni Fernando",
+    role: "Personalization developer using Few Shot Learning",
+    description:
+      "Hiruni has nearly 1 year of industry experience and passionate about web development and project management",
+    image: "/team/avatar-placeholder.svg",
+    github: "https://github.com/fernandoMHSJ",
+    linkedin: "https://www.linkedin.com/in/hiruni-fernandojudez/",
+  },
+  {
+    name: "Dr. Kalpani Manathunga",
+    role: "Supervisor | Head of Department",
+    description:
+      "Pioneer behind the idea and a leading academic in the field of software engineering with expertise in assistive and learning technologies",
+    image: "/team/kalpani_madam.jpeg",
+    github: "https://github.com/",
+    linkedin: "https://www.linkedin.com/in/kalpani-manathunga-0046ba91/",
+  },
+  {
+    name: "Mr. Jeewaka Perera",
+    role: "Co-supervisor",
+    description:
+      "Senior lecturer with deep expertise in the field of software engineering technologies, machine learning, deep reinforcement learning and neural network architectures.",
+    image: "/team/jeewaka_sir.jpeg",
+    github: "https://github.com/",
+    linkedin: "https://www.linkedin.com/in/jeewakaperera/",
+  },
+  {
+    name: "Mr. Sanka Mohottala",
+    role: "Academic Instructor",
+    description:
+      "Passionate interest about research and development in the intersection of science and engineering",
+    image: "/team/sanka_sir.jpeg",
+    github: "https://github.com/",
+    linkedin: "https://www.linkedin.com/in/sankamohottala/",
+  },
+] as const;
+
 export const PROJECT_SCOPE_SUBSECTIONS = [
   {
     id: "literature-review",
