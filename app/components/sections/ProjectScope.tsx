@@ -2,22 +2,42 @@ import { PROJECT_SCOPE_SUBSECTIONS } from "@/app/lib/constants";
 
 export function ProjectScope() {
   return (
-    <section id="project-scope" className="scroll-mt-20 border-b border-blue-100 bg-white">
+    <section
+      id="project-scope"
+      className="scroll-mt-20 border-b border-blue-100 bg-gradient-to-b from-white to-blue-50/40"
+    >
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <div className="max-w-2xl">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Project scope</h2>
-          <p className="mt-3 text-slate-600">
-            A structured overview of the research foundation, aims, and how the work will be carried out.
+
+        {/* HEADER */}
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900">
+            Project Scope
+          </h2>
+          <p className="mt-3 text-slate-600 leading-relaxed">
+            A structured overview of the research foundation, objectives, and
+            methodology behind the Hasthaartha system.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[220px_1fr] lg:gap-12">
-          <nav className="lg:sticky lg:top-24 lg:self-start" aria-label="Project scope subsections">
-            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Jump to</p>
-            <ul className="mt-3 space-y-1 border-l border-blue-100 pl-4">
+        {/* CONTENT */}
+        <div className="mt-16 grid gap-10 lg:grid-cols-[240px_1fr] lg:gap-14">
+
+          {/* SIDEBAR */}
+          <nav
+            className="lg:sticky lg:top-24 lg:self-start"
+            aria-label="Project scope subsections"
+          >
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Overview
+            </p>
+
+            <ul className="mt-4 space-y-2 border-l border-blue-100 pl-4">
               {PROJECT_SCOPE_SUBSECTIONS.map((s) => (
                 <li key={s.id}>
-                  <a href={`#${s.id}`} className="block py-1 text-sm text-slate-600 hover:text-blue-700">
+                  <a
+                    href={`#${s.id}`}
+                    className="block text-sm text-slate-600 transition hover:text-blue-700 hover:translate-x-1"
+                  >
                     {s.title}
                   </a>
                 </li>
@@ -25,15 +45,36 @@ export function ProjectScope() {
             </ul>
           </nav>
 
-          <div className="space-y-14">
+          {/* MAIN CONTENT */}
+          <div className="space-y-12">
             {PROJECT_SCOPE_SUBSECTIONS.map((s) => (
               <article
                 key={s.id}
                 id={s.id}
-                className="scroll-mt-24 rounded-2xl border border-blue-100 bg-blue-50/40 p-6 sm:p-8"
+                className="group scroll-mt-24 rounded-2xl border border-blue-100 bg-white p-6 sm:p-8 shadow-sm transition duration-300 hover:shadow-md hover:-translate-y-1"
               >
-                <h3 className="text-xl font-semibold text-slate-900">{s.title}</h3>
-                <p className="mt-3 leading-relaxed text-slate-600">{s.body}</p>
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-slate-900 group-hover:text-blue-700 transition">
+                  {s.title}
+                </h3>
+
+                {/* Divider */}
+                <div className="mt-2 h-[2px] w-12 bg-blue-200 group-hover:bg-blue-500 transition" />
+
+                {/* Body */}
+                {s.id === "references" && Array.isArray(s.body) ? (
+                  <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                    {s.body.map((ref) => (
+                      <li key={ref} className="leading-relaxed">
+                        {ref}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="mt-4 leading-relaxed text-slate-600">
+                    {s.body}
+                  </p>
+                )}
               </article>
             ))}
           </div>
