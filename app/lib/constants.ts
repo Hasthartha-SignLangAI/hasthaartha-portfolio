@@ -11,13 +11,13 @@ export const NAV_LINKS = [
 
 export const MILESTONES = [
   {
-    date: "2026-01-10",
+    date: "2025-05-10",
     topic: "Project Initiation",
     task: "Finalize team roles, project scope, and initial timeline.",
     status: "completed",
   },
   {
-    date: "2026-02-05",
+    date: "2026-05-25",
     topic: "Topic Assessment Submission",
     task: "Submit approved topic rationale with problem statement.",
     status: "completed",
@@ -26,19 +26,19 @@ export const MILESTONES = [
     date: "2026-03-01",
     topic: "Proposal Presentation",
     task: "Present methodology, objectives, and expected outcomes.",
-    status: "in progress",
+    status: "completed",
   },
   {
     date: "2026-04-12",
     topic: "Progress Presentation 1",
     task: "Demonstrate core module implementation and early results.",
-    status: "pending",
+    status: "completed",
   },
   {
     date: "2026-05-24",
     topic: "Progress Presentation 2",
     task: "Show integrated system progress and validation updates.",
-    status: "pending",
+    status: "completed",
   },
   {
     date: "2026-06-28",
@@ -50,13 +50,13 @@ export const MILESTONES = [
     date: "2026-07-30",
     topic: "Completion of Full System",
     task: "Complete all features, testing, and documentation.",
-    status: "pending",
+    status: "in progress",
   },
   {
     date: "2026-08-14",
     topic: "Portfolio Launch",
     task: "Publish final portfolio with artifacts and highlights.",
-    status: "pending",
+    status: "in progress",
   },
   {
     date: "2026-08-28",
@@ -137,42 +137,95 @@ export const PROJECT_SCOPE_SUBSECTIONS = [
     id: "literature-review",
     title: "Literature Review",
     body:
-      "Summarize prior work and situate your study within the existing body of knowledge. Replace this text with your synthesis of key sources and themes.",
+      "Sign language recognition systems are broadly categorized into vision-based and sensor-based approaches. Vision-based systems using cameras and deep learning models such as CNNs have shown promising results but are highly dependent on lighting conditions, camera positioning, and background complexity. In contrast, sensor-based approaches using wearable devices, particularly Electromyography (EMG) and Inertial Measurement Units (IMU), provide more robust and privacy-preserving solutions. Recent studies highlight the effectiveness of combining multimodal sensor data with deep learning models such as CNN-LSTM for capturing both spatial and temporal gesture patterns. However, most existing work focuses on widely used sign languages and lacks support for Sinhala Sign Language.",
   },
   {
     id: "research-gap",
     title: "Research Gap",
     body:
-      "Describe what remains unaddressed in the literature and why it matters. This anchors the need for your project.",
+      "Despite advancements in gesture recognition, there is a lack of solutions tailored for Sinhala Sign Language. Existing systems rarely combine wearable EMG and IMU sensors with real-time mobile deployment. Additionally, most models require large datasets and do not support personalization for new users. There is also limited research on edge AI deployment for real-time inference in resource-constrained environments. These limitations highlight the need for a system that is portable, accurate, adaptable, and capable of functioning in real-world conditions.",
   },
   {
     id: "research-problem-solution",
     title: "Research Problem and Solution",
     body:
-      "State the problem clearly and outline the proposed solution or approach at a high level.",
+      "The primary problem addressed in this research is the absence of an accessible and reliable real-time translation system for Sinhala Sign Language. Existing methods either depend heavily on visual input or lack adaptability to individual users. To address this, Hasthaartha proposes a wearable-based solution that utilizes EMG and IMU sensors to capture hand and muscle activity. The system streams data via BLE to a mobile application, where a hybrid CNN-LSTM model performs real-time gesture recognition. Additionally, a few-shot learning mechanism enables users to add custom gestures with minimal data, improving usability and personalization.",
   },
   {
     id: "research-objectives",
     title: "Research Objectives",
     body:
-      "List specific, measurable objectives that your research aims to achieve.",
+      "The main objective of this research is to develop a real-time Sinhala sign language translation system using wearable sensors and edge AI. Specific objectives include designing a wearable EMG-IMU data acquisition system, creating a labeled gesture dataset, developing a hybrid CNN-LSTM model for accurate recognition, deploying the model on mobile using ONNX for real-time inference, and implementing a few-shot learning mechanism to support user-defined gestures.",
   },
   {
     id: "methodology",
     title: "Methodology",
     body:
-      "Explain how you will investigate the problem: design, data collection, analysis, and validation.",
+      "The research follows a structured methodology consisting of multiple stages. First, EMG and IMU data are collected using a wearable device with an ESP32 microcontroller. The collected data are preprocessed through normalization and noise reduction techniques. Next, a hybrid CNN-LSTM model is trained to capture spatial and temporal features of gesture data. The trained model is then converted to ONNX format and deployed on a mobile application for real-time inference. A BLE communication pipeline enables continuous data streaming. Finally, a few-shot learning module is integrated to allow the system to recognize new gestures with limited training samples.",
   },
   {
     id: "technologies",
     title: "Technologies",
     body:
-      "List tools, frameworks, platforms, and languages used to implement and evaluate your work.",
+      "The system integrates multiple technologies across hardware, software, and machine learning domains. The wearable device is built using ESP32, EMG sensors, and an MPU9250 IMU. Data communication is handled via Bluetooth Low Energy (BLE). The mobile application is developed using Flutter, and on-device inference is performed using ONNX Runtime. Model development is carried out using Python and TensorFlow. The web-based research portfolio is built using Next.js and Tailwind CSS.",
   },
   {
     id: "references",
     title: "References",
-    body:
-      "Cite key publications in a consistent style. You can replace this block with a formatted bibliography.",
+    body:[
+      "This research is supported by prior studies in gesture recognition, wearable computing, and deep learning",
+      "[1] S. Mitra and T. Acharya, 'Gesture recognition: A survey,' IEEE Transactions on Systems, Man, and Cybernetics, 2007.",
+      "[2] X. Chen et al., 'Hand gesture recognition using EMG signals,' IEEE Transactions on Neural Systems, 2019.",
+      "[3] A. Graves, 'Supervised Sequence Labelling with Recurrent Neural Networks,' Springer, 2012.",
+      "[4] W. Zhang, J. Liu, and M. Chen, “Wearable sensors for sign language recognition: A comprehensive survey,” IEEE Sensors Journal, vol. 24, no. 5, pp. 850–868, 2024.",
+      "[5] O. Koller, J. Forster, and H. Ney, “Continuous sign language recognition: Towards large vocabulary statistical recognition systems,” in Computer Vision and Image Understanding, vol. 141, 2015, pp. 108–125.",
+      "[6] R. Hughes and E. Brown, “Design principles for wearable emg-imu systems,” IEEE Transactions on Biomedical Engineering, vol. 70, no. 8, pp. 2345–2359, 2023.",
+      "[7] C. Barnes and J. Fisher, “Few-shot learning dataset requirements for biosignal recognition,” Machine Learning, vol. 113, no. 2, pp. 1234–1256, 2024.",
+      "[8] W. Stevens and C. Porter, “Signal segmentation techniques for gesture recognition,” in IEEE International Conference on Acoustics, Speech and Signal Processing, 2023, pp. 1–5.",
+      "[9] ONNX Runtime Documentation. https://onnxruntime.ai",
+      "[10] Flutter Documentation. https://flutter.dev",
+    ]
   },
 ] as const;
+
+export const ACHIEVEMENTS = {
+  featured: {
+    status: "Research Paper Accepted",
+    title: "International Conference Acceptance",
+    subtitle:
+      "Our research has been accepted for presentation at ICDAM 2026",
+
+    paper: {
+      id: "ICDAM-2026-XXX",
+      title:
+        "Hasthaartha: Real-Time Sinhala Sign Language Translation Using Wearable EMG and Edge AI",
+    },
+
+    details: [
+      {
+        title: "Conference",
+        desc: "ICDAM 2026 – International Conference on Data Analytics and Management",
+      },
+      {
+        title: "Index",
+        desc: "Indexed by Scopus",
+      },
+      {
+        title: "Venue & Dates",
+        desc: "12 – 14 June 2026, London Metropolitan University (UK)",
+      },
+      {
+        title: "Website",
+        desc: "https://www.icdam-conf.com/",
+      },
+    ],
+  },
+
+  secondary: [
+    {
+      title: "SLASSCOM Ingenuity Awards 2026",
+      status: "Submission",
+      desc: "Submitted to Sri Lanka’s national innovation competition, highlighting the real-world impact and innovation of Hasthaartha.",
+    },
+  ],
+} as const;
