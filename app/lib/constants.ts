@@ -177,8 +177,55 @@ export const PROJECT_SCOPE_SUBSECTIONS = [
       "[1] S. Mitra and T. Acharya, 'Gesture recognition: A survey,' IEEE Transactions on Systems, Man, and Cybernetics, 2007.",
       "[2] X. Chen et al., 'Hand gesture recognition using EMG signals,' IEEE Transactions on Neural Systems, 2019.",
       "[3] A. Graves, 'Supervised Sequence Labelling with Recurrent Neural Networks,' Springer, 2012.",
-      "[4] ONNX Runtime Documentation. https://onnxruntime.ai",
-      "[5] Flutter Documentation. https://flutter.dev",
+      "[4] W. Zhang, J. Liu, and M. Chen, “Wearable sensors for sign language recognition: A comprehensive survey,” IEEE Sensors Journal, vol. 24, no. 5, pp. 850–868, 2024.",
+      "[5] O. Koller, J. Forster, and H. Ney, “Continuous sign language recognition: Towards large vocabulary statistical recognition systems,” in Computer Vision and Image Understanding, vol. 141, 2015, pp. 108–125.",
+      "[6] R. Hughes and E. Brown, “Design principles for wearable emg-imu systems,” IEEE Transactions on Biomedical Engineering, vol. 70, no. 8, pp. 2345–2359, 2023.",
+      "[7] C. Barnes and J. Fisher, “Few-shot learning dataset requirements for biosignal recognition,” Machine Learning, vol. 113, no. 2, pp. 1234–1256, 2024.",
+      "[8] W. Stevens and C. Porter, “Signal segmentation techniques for gesture recognition,” in IEEE International Conference on Acoustics, Speech and Signal Processing, 2023, pp. 1–5.",
+      "[9] ONNX Runtime Documentation. https://onnxruntime.ai",
+      "[10] Flutter Documentation. https://flutter.dev",
     ]
   },
 ] as const;
+
+export const ACHIEVEMENTS = {
+  featured: {
+    status: "Research Paper Accepted",
+    title: "International Conference Acceptance",
+    subtitle:
+      "Our research has been accepted for presentation at ICDAM 2026",
+
+    paper: {
+      id: "ICDAM-2026-XXX",
+      title:
+        "Hasthaartha: Real-Time Sinhala Sign Language Translation Using Wearable EMG and Edge AI",
+    },
+
+    details: [
+      {
+        title: "Conference",
+        desc: "ICDAM 2026 – International Conference on Data Analytics and Management",
+      },
+      {
+        title: "Index",
+        desc: "Indexed by Scopus",
+      },
+      {
+        title: "Venue & Dates",
+        desc: "12 – 14 June 2026, London Metropolitan University (UK)",
+      },
+      {
+        title: "Website",
+        desc: "https://www.icdam-conf.com/",
+      },
+    ],
+  },
+
+  secondary: [
+    {
+      title: "SLASSCOM Ingenuity Awards 2026",
+      status: "Submission",
+      desc: "Submitted to Sri Lanka’s national innovation competition, highlighting the real-world impact and innovation of Hasthaartha.",
+    },
+  ],
+} as const;

@@ -16,7 +16,7 @@ export function Milestones() {
   return (
     <section id="milestones" className="scroll-mt-20 border-b border-blue-100 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Milestones</h2>
           <p className="mt-3 text-slate-600">
             Track each checkpoint as a visual roadmap with date, task focus, and current progress status.
