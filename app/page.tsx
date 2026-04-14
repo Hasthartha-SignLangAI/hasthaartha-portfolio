@@ -1,6 +1,7 @@
 import { Footer } from "@/app/components/Footer";
 import { Header } from "@/app/components/Header";
 import { Contact } from "@/app/components/sections/Contact";
+import { Downloads } from "@/app/components/sections/Downloads";
 import { HomeHero } from "@/app/components/sections/HomeHero";
 import { Milestones } from "@/app/components/sections/Milestones";
 import { ProjectScope } from "@/app/components/sections/ProjectScope";
@@ -17,6 +18,7 @@ export default function Home() {
         <Milestones />
         <Team />
         <ResearchAchievement />
+        <Downloads />
         <Contact />
       </main>
       <Footer />

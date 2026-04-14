@@ -6,6 +6,7 @@ export const NAV_LINKS = [
   { href: "#milestones", label: "Milestones" },
   { href: "#team", label: "The Team" },
   { href: "#research-achievement", label: "Research Achievement" },
+  { href: "#downloads", label: "Downloads" },
   { href: "#contact", label: "Contact Us" },
 ] as const;
 
@@ -227,5 +228,20 @@ export const ACHIEVEMENTS = {
       status: "Submission",
       desc: "Submitted to Sri Lanka’s national innovation competition, highlighting the real-world impact and innovation of Hasthaartha.",
     },
+  ],
+} as const;
+
+export const DOWNLOADS = {
+  documents: [
+    { title: "Topic Assessment", audience: "Group", href: "#" },
+    { title: "Project Proposal Report", audience: "Individual", href: "#" },
+    { title: "Final Report", audience: "Both", href: "#" },
+    { title: "Research Paper (Camera-ready)", audience: "Individual", href: "#" },
+  ],
+  presentations: [
+    { title: "Proposal Presentation Slides", audience: "Individual", href: "#" },
+    { title: "Progress Presentation 1 Slides", audience: "Group", href: "#" },
+    { title: "Progress Presentation 2 Slides", audience: "Group", href: "#" },
+    { title: "Final Presentation Slides", audience: "Group", href: "#" },
   ],
 } as const;
