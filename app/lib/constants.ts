@@ -82,7 +82,7 @@ export const TEAM_MEMBERS = [
     role: "Hybrid model trainer",
     description:
       "James has over 1 year of industry experience and interested in software development, automation workflows and and LLM technologies",
-    image: "/team/avatar-placeholder.svg",
+    image: "/team/James.jpeg",
     github: "https://github.com/JamesSembukuttiarachchi",
     linkedin: "https://www.linkedin.com/in/jamessembukuttiarachchi/",
   },
@@ -100,7 +100,7 @@ export const TEAM_MEMBERS = [
     role: "Personalization developer using Few Shot Learning",
     description:
       "Hiruni has nearly 1 year of industry experience and passionate about web development and project management",
-    image: "/team/avatar-placeholder.svg",
+    image: "/team/Hiruni.jpg",
     github: "https://github.com/fernandoMHSJ",
     linkedin: "https://www.linkedin.com/in/hiruni-fernandojudez/",
   },
