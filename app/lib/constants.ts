@@ -18,7 +18,7 @@ export const MILESTONES = [
     status: "completed",
   },
   {
-    date: "2026-05-25",
+    date: "2025-05-25",
     topic: "Topic Assessment Submission",
     task: "Submit approved topic rationale with problem statement.",
     status: "completed",
