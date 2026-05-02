@@ -1,6 +1,16 @@
+"use client";
+
+import { useState, useMemo } from "react";
 import { PROJECT_SCOPE_SUBSECTIONS } from "@/app/lib/constants";
+import { FaChevronRight } from "react-icons/fa6";
 
 export function ProjectScope() {
+  const [activeSectionId, setActiveSectionId] = useState<string>("literature-review");
+
+  const activeSection = useMemo(() => 
+    PROJECT_SCOPE_SUBSECTIONS.find(s => s.id === activeSectionId) || PROJECT_SCOPE_SUBSECTIONS[0]
+  , [activeSectionId]);
+
   return (
     <section
       id="project-scope"
@@ -9,7 +19,7 @@ export function ProjectScope() {
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
 
         {/* HEADER */}
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900">
             Project Scope
           </h2>
@@ -19,64 +29,87 @@ export function ProjectScope() {
           </p>
         </div>
 
-        {/* CONTENT */}
-        <div className="mt-16 grid gap-10 lg:grid-cols-[240px_1fr] lg:gap-14">
+        {/* CONTENT AREA */}
+        <div className="grid gap-8 lg:grid-cols-[1fr_2fr] lg:gap-12">
 
-          {/* SIDEBAR */}
-          <nav
-            className="lg:sticky lg:top-24 lg:self-start"
-            aria-label="Project scope subsections"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Overview
+          {/* TOPIC BOXES (LEFT) */}
+          <div className="flex flex-col gap-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
+              Select a Topic
             </p>
-
-            <ul className="mt-4 space-y-2 border-l border-blue-100 pl-4">
-              {PROJECT_SCOPE_SUBSECTIONS.map((s) => (
-                <li key={s.id}>
-                  <a
-                    href={`#${s.id}`}
-                    className="block text-sm text-slate-600 transition hover:text-blue-700 hover:translate-x-1"
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              {PROJECT_SCOPE_SUBSECTIONS.map((s) => {
+                const isActive = s.id === activeSectionId;
+                return (
+                  <button
+                    key={s.id}
+                    onClick={() => setActiveSectionId(s.id)}
+                    className={`group relative flex items-center justify-between rounded-xl border p-5 text-left transition-all duration-300 ${
+                      isActive
+                        ? "border-blue-500 bg-blue-50 shadow-md ring-1 ring-blue-500"
+                        : "border-slate-200 bg-white hover:border-blue-300 hover:shadow-sm"
+                    }`}
                   >
-                    {s.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                    <div className="flex items-center gap-4">
+                      <div className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${isActive ? 'bg-blue-600 scale-125' : 'bg-slate-300 group-hover:bg-blue-400'}`} />
+                      <span className={`text-sm font-semibold transition-colors duration-300 ${isActive ? 'text-blue-900' : 'text-slate-600 group-hover:text-blue-700'}`}>
+                        {s.title}
+                      </span>
+                    </div>
+                    <FaChevronRight className={`text-xs transition-all duration-300 ${isActive ? 'translate-x-1 text-blue-600' : 'opacity-0 -translate-x-2 text-slate-400 group-hover:opacity-100 group-hover:translate-x-0'}`} />
+                  </button>
+                );
+              })}
+            </div>
+          </div>
 
-          {/* MAIN CONTENT */}
-          <div className="space-y-12">
-            {PROJECT_SCOPE_SUBSECTIONS.map((s) => (
-              <article
-                key={s.id}
-                id={s.id}
-                className="group scroll-mt-24 rounded-2xl border border-blue-100 bg-white p-6 sm:p-8 shadow-sm transition duration-300 hover:shadow-md hover:-translate-y-1"
-              >
-                {/* Title */}
-                <h3 className="text-xl font-semibold text-slate-900 group-hover:text-blue-700 transition">
-                  {s.title}
+          {/* DISPLAY AREA (RIGHT) */}
+          <div className="relative min-h-[450px]">
+            <div
+              className="h-full rounded-3xl border border-blue-100 bg-white p-8 sm:p-12 shadow-xl shadow-blue-900/5 transition-all duration-500 flex flex-col"
+            >
+              {/* Content Header */}
+              <div className="mb-8">
+                <div className="flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">
+                  <span>Scope Detail</span>
+                  <div className="h-[1px] w-8 bg-blue-200" />
+                </div>
+                <h3 className="text-3xl font-bold text-slate-900 tracking-tight">
+                  {activeSection.title}
                 </h3>
+              </div>
 
-                {/* Divider */}
-                <div className="mt-2 h-[2px] w-12 bg-blue-200 group-hover:bg-blue-500 transition" />
-
-                {/* Body */}
-                {s.id === "references" && Array.isArray(s.body) ? (
-                  <ul className="mt-4 space-y-2 text-sm text-slate-600">
-                    {s.body.map((ref) => (
-                      <li key={ref} className="leading-relaxed">
-                        {ref}
-                      </li>
-                    ))}
-                  </ul>
+              {/* Body */}
+              <div className="flex-grow">
+                {activeSection.id === "references" && Array.isArray(activeSection.body) ? (
+                  <div className="space-y-4">
+                    <p className="text-slate-500 italic text-sm mb-6">
+                      Supporting research and citations for the Hasthaartha project.
+                    </p>
+                    <ul className="space-y-3">
+                      {activeSection.body.map((ref, idx) => (
+                        <li key={idx} className="flex gap-4 text-sm leading-relaxed text-slate-600 bg-slate-50/50 p-3 rounded-lg border border-slate-100/50">
+                          <span className="text-blue-500 font-bold shrink-0 mt-0.5">[{idx + 1}]</span>
+                          <span>{ref}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ) : (
-                  <p className="mt-4 leading-relaxed text-slate-600">
-                    {s.body}
-                  </p>
+                  <div className="relative">
+                    <p className="text-lg leading-relaxed text-slate-600 first-letter:text-4xl first-letter:font-bold first-letter:text-blue-600 first-letter:mr-2 first-letter:float-left">
+                      {activeSection.body}
+                    </p>
+                  </div>
                 )}
-              </article>
-            ))}
+              </div>
+
+              {/* Footer / Decorative element */}
+              <div className="mt-12 pt-8 border-t border-slate-50 flex items-center justify-between text-xs text-slate-400 font-medium">
+                <span>Hasthaartha Research Portfolio</span>
+                <span className="uppercase tracking-widest">Section: {activeSection.id.replace(/-/g, ' ')}</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
