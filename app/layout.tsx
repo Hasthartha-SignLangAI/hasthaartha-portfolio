@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Hasthaartha — Research Portfolio",
   description:
     "Research portfolio: project scope, milestones, team, achievements, and contact.",
+  icons: {
+    icon: "/favicon.jpeg",
+  },
 };
 
 export default function RootLayout({

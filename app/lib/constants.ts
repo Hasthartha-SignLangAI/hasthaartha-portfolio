@@ -138,19 +138,19 @@ export const PROJECT_SCOPE_SUBSECTIONS = [
     id: "literature-review",
     title: "Literature Review",
     body:
-      "Sign language recognition systems are broadly categorized into vision-based and sensor-based approaches. Vision-based systems using cameras and deep learning models such as CNNs have shown promising results but are highly dependent on lighting conditions, camera positioning, and background complexity. In contrast, sensor-based approaches using wearable devices, particularly Electromyography (EMG) and Inertial Measurement Units (IMU), provide more robust and privacy-preserving solutions. Recent studies highlight the effectiveness of combining multimodal sensor data with deep learning models such as CNN-LSTM for capturing both spatial and temporal gesture patterns. However, most existing work focuses on widely used sign languages and lacks support for Sinhala Sign Language.",
+      "Sign language recognition systems are broadly categorized into vision-based and sensor-based approaches [1], [4]. Vision-based systems using cameras and deep learning models such as CNNs have shown promising results [5] but are highly dependent on lighting conditions, camera positioning, and background complexity. In contrast, sensor-based approaches using wearable devices, particularly Electromyography (EMG) and Inertial Measurement Units (IMU), provide more robust and privacy-preserving solutions [2], [6]. Recent studies highlight the effectiveness of combining multimodal sensor data with deep learning models such as CNN-LSTM for capturing both spatial and temporal gesture patterns [3], [8]. However, most existing work focuses on widely used sign languages and lacks support for Sinhala Sign Language.",
   },
   {
     id: "research-gap",
     title: "Research Gap",
     body:
-      "Despite advancements in gesture recognition, there is a lack of solutions tailored for Sinhala Sign Language. Existing systems rarely combine wearable EMG and IMU sensors with real-time mobile deployment. Additionally, most models require large datasets and do not support personalization for new users. There is also limited research on edge AI deployment for real-time inference in resource-constrained environments. These limitations highlight the need for a system that is portable, accurate, adaptable, and capable of functioning in real-world conditions.",
+      "Despite advancements in gesture recognition, there is a lack of solutions tailored for Sinhala Sign Language. Existing systems rarely combine wearable EMG and IMU sensors with real-time mobile deployment. Additionally, most models require large datasets and do not support personalization for new users [7]. There is also limited research on edge AI deployment for real-time inference in resource-constrained environments. These limitations highlight the need for a system that is portable, accurate, adaptable, and capable of functioning in real-world conditions.",
   },
   {
     id: "research-problem-solution",
     title: "Research Problem and Solution",
     body:
-      "The primary problem addressed in this research is the absence of an accessible and reliable real-time translation system for Sinhala Sign Language. Existing methods either depend heavily on visual input or lack adaptability to individual users. To address this, Hasthaartha proposes a wearable-based solution that utilizes EMG and IMU sensors to capture hand and muscle activity. The system streams data via BLE to a mobile application, where a hybrid CNN-LSTM model performs real-time gesture recognition. Additionally, a few-shot learning mechanism enables users to add custom gestures with minimal data, improving usability and personalization.",
+      "The primary problem addressed in this research is the absence of an accessible and reliable real-time translation system for Sinhala Sign Language. Existing methods either depend heavily on visual input or lack adaptability to individual users. To address this, Hasthaartha proposes a wearable-based solution that utilizes EMG and IMU sensors to capture hand and muscle activity. The system streams data via BLE to a mobile application, where a hybrid CNN-LSTM model performs real-time gesture recognition. Additionally, a few-shot learning mechanism enables users to add custom gestures with minimal data, improving usability and personalization [7].",
   },
   {
     id: "research-objectives",
@@ -162,13 +162,13 @@ export const PROJECT_SCOPE_SUBSECTIONS = [
     id: "methodology",
     title: "Methodology",
     body:
-      "The research follows a structured methodology consisting of multiple stages. First, EMG and IMU data are collected using a wearable device with an ESP32 microcontroller. The collected data are preprocessed through normalization and noise reduction techniques. Next, a hybrid CNN-LSTM model is trained to capture spatial and temporal features of gesture data. The trained model is then converted to ONNX format and deployed on a mobile application for real-time inference. A BLE communication pipeline enables continuous data streaming. Finally, a few-shot learning module is integrated to allow the system to recognize new gestures with limited training samples.",
+      "The research follows a structured methodology consisting of multiple stages. First, EMG and IMU data are collected using a wearable device with an ESP32 microcontroller. The collected data are preprocessed through normalization and noise reduction techniques [8]. Next, a hybrid CNN-LSTM model is trained to capture spatial and temporal features of gesture data [3]. The trained model is then converted to ONNX format and deployed on a mobile application for real-time inference [9]. A BLE communication pipeline enables continuous data streaming. Finally, a few-shot learning module is integrated to allow the system to recognize new gestures with limited training samples [7].",
   },
   {
     id: "technologies",
     title: "Technologies",
     body:
-      "The system integrates multiple technologies across hardware, software, and machine learning domains. The wearable device is built using ESP32, EMG sensors, and an MPU9250 IMU. Data communication is handled via Bluetooth Low Energy (BLE). The mobile application is developed using Flutter, and on-device inference is performed using ONNX Runtime. Model development is carried out using Python and TensorFlow. The web-based research portfolio is built using Next.js and Tailwind CSS.",
+      "The system integrates multiple technologies across hardware, software, and machine learning domains. The wearable device is built using ESP32, EMG sensors, and an MPU9250 IMU. Data communication is handled via Bluetooth Low Energy (BLE). The mobile application is developed using Flutter [10], and on-device inference is performed using ONNX Runtime [9]. Model development is carried out using Python and TensorFlow. The web-based research portfolio is built using Next.js and Tailwind CSS.",
   },
   {
     id: "references",
