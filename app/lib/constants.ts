@@ -24,43 +24,43 @@ export const MILESTONES = [
     status: "completed",
   },
   {
-    date: "2026-03-01",
+    date: "2025-08-18",
     topic: "Proposal Presentation",
     task: "Present methodology, objectives, and expected outcomes.",
     status: "completed",
   },
   {
-    date: "2026-04-12",
+    date: "2026-01-05",
     topic: "Progress Presentation 1",
     task: "Demonstrate core module implementation and early results.",
     status: "completed",
   },
   {
-    date: "2026-05-24",
+    date: "2026-03-08",
     topic: "Progress Presentation 2",
     task: "Show integrated system progress and validation updates.",
     status: "completed",
   },
   {
-    date: "2026-06-28",
+    date: "2026-05-08",
     topic: "Research Paper Submission",
     task: "Submit manuscript with findings and references.",
     status: "pending",
   },
   {
-    date: "2026-07-30",
+    date: "2026-05-04",
     topic: "Completion of Full System",
     task: "Complete all features, testing, and documentation.",
     status: "in progress",
   },
   {
-    date: "2026-08-14",
+    date: "2026-04-30",
     topic: "Portfolio Launch",
     task: "Publish final portfolio with artifacts and highlights.",
-    status: "in progress",
+    status: "completed",
   },
   {
-    date: "2026-08-28",
+    date: "2026-05-04",
     topic: "Final Presentation",
     task: "Deliver final defense and demonstrate full project impact.",
     status: "pending",
@@ -174,7 +174,6 @@ export const PROJECT_SCOPE_SUBSECTIONS = [
     id: "references",
     title: "References",
     body:[
-      "This research is supported by prior studies in gesture recognition, wearable computing, and deep learning",
       "[1] S. Mitra and T. Acharya, 'Gesture recognition: A survey,' IEEE Transactions on Systems, Man, and Cybernetics, 2007.",
       "[2] X. Chen et al., 'Hand gesture recognition using EMG signals,' IEEE Transactions on Neural Systems, 2019.",
       "[3] A. Graves, 'Supervised Sequence Labelling with Recurrent Neural Networks,' Springer, 2012.",
@@ -233,15 +232,15 @@ export const ACHIEVEMENTS = {
 
 export const DOWNLOADS = {
   documents: [
-    { title: "Topic Assessment", audience: "Group", href: "#" },
-    { title: "Project Proposal Report", audience: "Individual", href: "#" },
-    { title: "Final Report", audience: "Both", href: "#" },
-    { title: "Research Paper (Camera-ready)", audience: "Individual", href: "#" },
+    { title: "Topic Assessment", audience: "Group", href: "https://drive.google.com/drive/folders/1cmmw2jTg6qGTe7SbL7BCKPA9tM6MK1b9?usp=drive_link" },
+    { title: "Project Proposal Report", audience: "Individual", href: "https://drive.google.com/drive/folders/1ZzPmckb4dJpNYBMheO-MwwYuB3XwaQlL?usp=drive_link" },
+    { title: "Final Report", audience: "Both", href: "https://drive.google.com/drive/folders/19S5CEYk08eZVGeZvWWMiJitviaygwSd0?usp=drive_link" },
+    { title: "Research Paper (Camera-ready)", audience: "Individual", href: "https://drive.google.com/drive/folders/11TeOdxM90ry5osk_UyyqNjlNglHFSv1N?usp=drive_link" },
   ],
   presentations: [
-    { title: "Proposal Presentation Slides", audience: "Individual", href: "#" },
-    { title: "Progress Presentation 1 Slides", audience: "Group", href: "#" },
-    { title: "Progress Presentation 2 Slides", audience: "Group", href: "#" },
-    { title: "Final Presentation Slides", audience: "Group", href: "#" },
+    { title: "Proposal Presentation Slides", audience: "Individual", href: "https://drive.google.com/drive/folders/15R2qXvslxC-YGZlNCLZzw1JVSbvYmb1K?usp=drive_link" },
+    { title: "Progress Presentation 1 Slides", audience: "Group", href: "https://drive.google.com/drive/folders/1Hn-tQJM5McAxY7am7WntY3RlZhqBAqwe?usp=drive_link" },
+    { title: "Progress Presentation 2 Slides", audience: "Group", href: "https://drive.google.com/drive/folders/1CdWYbFbiw5yphBiEBRfwrNrxeJMStIqO?usp=drive_link" },
+    { title: "Final Presentation Slides", audience: "Group", href: "https://drive.google.com/drive/folders/1qSar2gh1Vx3JwD9BMdhnewwzFrnObr-u" },
   ],
 } as const;

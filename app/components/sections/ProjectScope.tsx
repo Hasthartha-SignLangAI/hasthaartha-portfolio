@@ -89,7 +89,6 @@ export function ProjectScope() {
                     <ul className="space-y-3">
                       {activeSection.body.map((ref, idx) => (
                         <li key={idx} className="flex gap-4 text-sm leading-relaxed text-slate-600 bg-slate-50/50 p-3 rounded-lg border border-slate-100/50">
-                          <span className="text-blue-500 font-bold shrink-0 mt-0.5">[{idx + 1}]</span>
                           <span>{ref}</span>
                         </li>
                       ))}
@@ -97,18 +96,12 @@ export function ProjectScope() {
                   </div>
                 ) : (
                   <div className="relative">
-                    <p className="text-lg leading-relaxed text-slate-600 first-letter:text-4xl first-letter:font-bold first-letter:text-blue-600 first-letter:mr-2 first-letter:float-left">
+                    <p className="text-lg leading-relaxed text-slate-600">
                       {activeSection.body}
                     </p>
                   </div>
                 )}
-              </div>
-
-              {/* Footer / Decorative element */}
-              <div className="mt-12 pt-8 border-t border-slate-50 flex items-center justify-between text-xs text-slate-400 font-medium">
-                <span>Hasthaartha Research Portfolio</span>
-                <span className="uppercase tracking-widest">Section: {activeSection.id.replace(/-/g, ' ')}</span>
-              </div>
+              </div>              
             </div>
           </div>
         </div>
