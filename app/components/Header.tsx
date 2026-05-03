@@ -22,7 +22,10 @@ export function Header() {
         <div className="absolute left-1/2 top-0 h-[100px] w-[130px] -translate-x-1/2 rounded-b-[3rem] bg-white md:h-[120px] md:w-[160px] md:rounded-b-[3.5rem]" />
       </div>
 
-      <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+      <div className="relative mx-auto flex h-16 max-w-7xl items-center px-4 sm:px-6 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8">
+        
+        {/* Mobile Spacer - Left */}
+        <div className="flex-1 md:hidden" />
         
         {/* Desktop Nav - Left */}
         <nav className="hidden md:flex items-center justify-start gap-1 lg:gap-2" aria-label="Primary Left">
@@ -69,7 +72,7 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden justify-end">
+        <div className="flex-1 flex md:hidden justify-end">
           <button
             type="button"
             className="inline-flex items-center justify-center rounded-full bg-slate-50 p-2.5 text-slate-700 shadow-sm ring-1 ring-slate-200 transition-all hover:bg-slate-100"
