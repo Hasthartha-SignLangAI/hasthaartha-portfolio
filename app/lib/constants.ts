@@ -42,16 +42,10 @@ export const MILESTONES = [
     status: "completed",
   },
   {
-    date: "2026-05-08",
-    topic: "Research Paper Submission",
-    task: "Submit manuscript with findings and references.",
-    status: "pending",
-  },
-  {
-    date: "2026-05-04",
+    date: "2026-04-20",
     topic: "Completion of Full System",
     task: "Complete all features, testing, and documentation.",
-    status: "in progress",
+    status: "completed",
   },
   {
     date: "2026-04-30",
@@ -63,6 +57,12 @@ export const MILESTONES = [
     date: "2026-05-04",
     topic: "Final Presentation",
     task: "Deliver final defense and demonstrate full project impact.",
+    status: "pending",
+  },
+  {
+    date: "2026-05-08",
+    topic: "Research Paper Submission",
+    task: "Submit manuscript with findings and references.",
     status: "pending",
   },
 ] as const;
