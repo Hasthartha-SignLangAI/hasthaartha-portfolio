@@ -100,7 +100,7 @@ export const TEAM_MEMBERS = [
     role: "Personalization developer using Few Shot Learning",
     description:
       "Hiruni has nearly 1 year of industry experience and passionate about web development and project management",
-    image: "/team/Hiruni.jpg",
+    image: "/team/hiruni.jpeg",
     github: "https://github.com/fernandoMHSJ",
     linkedin: "https://www.linkedin.com/in/hiruni-fernandojudez/",
   },
